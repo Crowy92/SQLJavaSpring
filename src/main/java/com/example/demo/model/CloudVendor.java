@@ -1,11 +1,17 @@
 package com.example.demo.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class CloudVendor {
+    @Id
     private String vendorId;
     private String vendorName;
     private String vendorAddress;
     private String vendorPhoneNumber;
 
+//    note: in the sql database all these camel case fields will be snake case vendorId -> vendor_id
     public String getVendorId() {
         return vendorId;
     }
@@ -47,6 +53,4 @@ public class CloudVendor {
         this.vendorAddress = vendorAddress;
         this.vendorPhoneNumber = vendorPhoneNumber;
     }
-
-
 }
